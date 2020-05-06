@@ -18,6 +18,15 @@ def new_chat(username):
         message.send_keys('Hi, I\'m kutty\'s bot')
         sendbtn = driver.find_element_by_xpath('//button[@class="_35EW6"]')
         sendbtn.click()
+        
+        filepath = "set a path of your file located "
+        files = driver.find_element_by_xpath('//div[@title="Attach"]')
+        files.click()
+        images = driver.find_element_by_xpath('//input[@accept="image/*,video/mp4,video/3gpp,video/quicktime"]')
+        images.send_keys(filepath)
+        time.sleep(2)
+        image_send_btn = driver.find_element_by_xpath('//span[@data-icon="send-light"]')
+        image_send_btn.click()
 
     except ElementClickInterceptedException:
         print('This person is not in your contact')
@@ -51,6 +60,15 @@ if __name__=='__main__':
             message.send_keys('Hi, I\'m kutty\'s bot')
             sendbtn = driver.find_element_by_xpath('//button[@class="_35EW6"]')
             sendbtn.click()
+            
+            filepath = "set a path of your file located "
+            files = driver.find_element_by_xpath('//div[@title="Attach"]')
+            files.click()
+            images = driver.find_element_by_xpath('//input[@accept="image/*,video/mp4,video/3gpp,video/quicktime"]')
+            images.send_keys(filepath)
+            time.sleep(2)
+            image_send_btn = driver.find_element_by_xpath('//span[@data-icon="send-light"]')
+            image_send_btn.click()
 
         except NoSuchElementException as nc:
             new_chat(username)
