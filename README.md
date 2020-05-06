@@ -14,3 +14,4 @@
 # give the name of the person whom did you want to send a message. username_list = ['XXX', 'YYY', 'ZZZ']
 Note: how did you save that name in your contact. (Like arun Dosthu, venki frd, Friend, Crush, Priya drlng) Uppercase, Lowercase included
 # Type a message in this place.   message.send_keys('Hi!!!') 
+
