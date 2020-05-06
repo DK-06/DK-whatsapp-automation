@@ -12,21 +12,12 @@ def new_chat(username):
     new_user.send_keys(username)
     time.sleep(2)
     try:
-        '''filepath = "D:/Deepak/BlackWallpapers/orsrc28717.jpg"'''
         user=driver.find_element_by_xpath('//span[@title="{}"]'.format(username))
         user.click()
         message = driver.find_element_by_xpath('//div[@class="_1Plpp"]')
         message.send_keys('Hi, I\'m kutty\'s bot')
         sendbtn = driver.find_element_by_xpath('//button[@class="_35EW6"]')
         sendbtn.click()
-
-        '''files = driver.find_element_by_xpath('//div[@title="Attach"]')
-                    files.click()
-                    images = driver.find_element_by_xpath('//input[@accept="image/*,video/mp4,video/3gpp,video/quicktime"]')
-                    images.send_keys(filepath)
-                    time.sleep(2)
-                    image_send_btn = driver.find_element_by_xpath('//span[@data-icon="send-light"]')
-                    image_send_btn.click()'''
 
     except ElementClickInterceptedException:
         print('This person is not in your contact')
@@ -54,23 +45,12 @@ if __name__=='__main__':
     username_list = ['XXX']
     for username in username_list:
         try:
-            '''filepath="D:/Deepak/BlackWallpapers/orsrc28717.jpg"'''
             user=driver.find_element_by_xpath('//span[@title="{}"]'.format(username))
             user.click()
             message = driver.find_element_by_xpath('//div[@class="_1Plpp"]')
             message.send_keys('Hi, I\'m kutty\'s bot')
             sendbtn = driver.find_element_by_xpath('//button[@class="_35EW6"]')
             sendbtn.click()
-
-            '''files = driver.find_element_by_xpath('//div[@title="Attach"]')
-            files.click()
-            images = driver.find_element_by_xpath('//input[@accept="image/*,video/mp4,video/3gpp,video/quicktime"]')
-            images.send_keys(filepath)
-            time.sleep(2)
-            image_send_btn = driver.find_element_by_xpath('//span[@data-icon="send-light"]')
-            image_send_btn.click()'''
-
-
 
         except NoSuchElementException as nc:
             new_chat(username)
