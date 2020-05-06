@@ -8,8 +8,7 @@
 # first time you must need to scan qr code and then it didn't ask you for scanning the qr code. so that you must need to set the cache
 # In windows, it's located in C:/Users/"system name"/AppData/Local/Google/Chrome/User Data/Default
 # This is link for all os user data dir location:  https://chromium.googlesource.com/chromium/src.git/+/62.0.3202.58/docs/user_data_dir.md
-#check it for yours
-
+# check it Your user data dir in above link for other OS
 # set the chromedriver path in that line in python file. driver=webdriver.Chrome(executable_path='path of chromedriver', options=options)
 # set the time in this place(///"hour"///, ///"minute"///). if (time.localtime(time.time()).tm_hour == ///"hour"/// and time.localtime(time.time()).tm_min == ///"minute"///)
 # give the name of the person whom did you want to send a message. username_list = ['XXX', 'YYY', 'ZZZ']
